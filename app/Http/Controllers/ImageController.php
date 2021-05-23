@@ -14,7 +14,7 @@ class ImageController extends Controller
      */
     public function index()
     {
-        //
+        return view('imagenes.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class ImageController extends Controller
      */
     public function create()
     {
-        //
+        return view('imagenes.create');
     }
 
     /**
@@ -46,7 +46,7 @@ class ImageController extends Controller
      */
     public function show(Image $image)
     {
-        //
+        return view('imagenes.show');
     }
 
     /**
@@ -57,7 +57,7 @@ class ImageController extends Controller
      */
     public function edit(Image $image)
     {
-        //
+        return view('imagenes.edit');
     }
 
     /**

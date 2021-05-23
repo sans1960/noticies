@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ImageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,4 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 Route::resource('posts', PostController::class)->middleware(['auth'])->names('posts');
+Route::resource('imagenes', ImageController::class)->middleware(['auth'])->names('imagenes');
