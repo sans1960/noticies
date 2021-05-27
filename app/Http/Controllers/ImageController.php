@@ -36,11 +36,25 @@ class ImageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-         dd($request->all());
-    
-    }
+     public function store(Request $request)
+     {
+          
+          $imagen=new Image($request->all());
+            if ($request->hasFile('imagen')){
+            $file           = $request->file("imagen");
+
+           $nombrearchivo  = $file->getClientOriginalName();
+           $file->move(public_path("img/posts"),$nombrearchivo);
+            $imagen->imagen      = $nombrearchivo;
+        }
+        $imagen->save();
+
+
+       return redirect()->route('imagenes.index')->with("success"," Imagen Creada" );
+
+         
+     }
+
 
     /**
      * Display the specified resource.
