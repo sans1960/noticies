@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Image;
+use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ImageController extends Controller
 {
@@ -24,7 +26,8 @@ class ImageController extends Controller
      */
     public function create()
     {
-        return view('imagenes.create');
+        $posts = Post::all();
+        return view('imagenes.create',compact('posts'));
     }
 
     /**
@@ -35,7 +38,8 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         dd($request->all());
+    
     }
 
     /**
