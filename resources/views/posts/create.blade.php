@@ -35,11 +35,7 @@
                               <textarea name="bloque1" id="bloque1"class="block w-full mt-1"  cols="30" rows="10"></textarea>
 
                             </div>
-                            <div class="mt-4">
-                                <x-label for="bloque2" :value="__('Body bis')" />
-                                <textarea name="bloque2" id="bloque2" cols="30" rows="10"></textarea>
 
-                            </div>
                         </div>
                         <div class="mt-4">
                             <x-label for="fecha" :value="__('Fecha')" />
@@ -68,10 +64,6 @@
         .catch( error => {
             console.error( error );
         } );
-        ClassicEditor
-        .create( document.querySelector( '#bloque2' ) )
-        .catch( error => {
-            console.error( error );
-        } );
+    
     </script>
 </x-app-layout>

@@ -7,7 +7,7 @@
       <div class="p-4 md:w-1/2 sm:mb-0 mb-6">
         <div class="rounded-lg h-64 overflow-hidden">
 
-          <img alt="content" class="object-cover object-center h-full w-full" src="{{ asset('img/posts/'.$blog->url)}}">
+          <img alt="content" class="object-contain object-center h-full w-full" src="{{ asset('img/posts/'.$blog->url)}}">
         </div>
         <h2 class="text-2xl font-medium title-font text-white mt-5">{{$blog->titulo}}</h2>
         <h2 class="text-xl font-medium title-font text-white mt-5">{{$blog->autor}}</h2>
