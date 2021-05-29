@@ -20,8 +20,8 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/blog',[FrontController::class,'blog']);
-Route::get('/blog/{id}',[FrontController::class,'post']);
+Route::get('/blogs',[FrontController::class,'index'])->name('blogs.index');
+Route::get('/blogs/{blog}',[FrontController::class,'show'])->name('blogs.show');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

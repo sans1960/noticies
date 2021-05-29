@@ -9,9 +9,12 @@ use App\Models\Image;
 
 class FrontController extends Controller
 {
-    public function blog(){
-      $posts = Post::all();
-      return view('blog',compact('posts'));
+    public function index(){
+    $blogs = Post::all();
+      return view('blog',compact('blogs'));
+    }
+    public function show(Post $blog){
+        return view('post',compact('blog'));
     }
 
 }
