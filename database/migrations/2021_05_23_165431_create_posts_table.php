@@ -18,6 +18,8 @@ class CreatePostsTable extends Migration
             $table->string('titulo');
             $table->string('autor');
             $table->string('entrada');
+            $table->string('url');
+
             $table->text('bloque1');
             $table->text('bloque2')->nullable();
             $table->date('fecha');

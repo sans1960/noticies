@@ -9,7 +9,7 @@
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    <form action="{{route('posts.store')}}" method="post">
+                    <form action="{{route('posts.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="grid grid-cols-1">
                             <div class="mt-4">
@@ -45,6 +45,12 @@
                             <x-label for="fecha" :value="__('Fecha')" />
 
                             <x-input id="fecha" class="block mt-1" type="date" name="fecha"  />
+
+                        </div>
+                        <div class="mt-4">
+                            <x-label for="imagen" :value="__('Imagen')" />
+
+                            <x-input id="imagen" class="block mt-1" type="file" name="url"  />
 
                         </div>
                         <x-button class="mt-5 ml-4">

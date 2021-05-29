@@ -15,16 +15,16 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
-	
+
 </head>
 <body>
-   <nav class="w-full py-2 bg-blue-800 shadow">
+   <nav class="w-full py-2 bg-blue-600 shadow">
         <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
 
             <nav>
                 <ul class="flex items-center justify-between font-bold text-sm text-white uppercase no-underline">
-                    <li><a class="hover:text-gray-200 hover:underline px-4" href="#">Home</a></li>
-                    <li><a class="hover:text-gray-200 hover:underline px-4" href="#">Blog</a></li>
+                    <li><a class="hover:text-gray-200 hover:underline px-4" href="/">Home</a></li>
+                    <li><a class="hover:text-gray-200 hover:underline px-4" href="/blog">Blog</a></li>
                     <li><a class="hover:text-gray-200 hover:underline px-4" href="#">Links</a></li>
                     <li><a class="hover:text-gray-200 hover:underline px-4" href="#">News</a></li>
                 </ul>
@@ -42,7 +42,7 @@
                     login
                 </a>
                    @endauth
-               
+
             </div>
                 @endif
             </div>

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\FrontController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,9 @@ use App\Http\Controllers\ImageController;
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/blog',[FrontController::class,'blog']);
+Route::get('/blog/{id}',[FrontController::class,'post']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

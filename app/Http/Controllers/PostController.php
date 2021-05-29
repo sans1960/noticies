@@ -36,8 +36,18 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        Post::create($request->all());
-        return redirect()->route('posts.index')->with("success"," Post Creado" );
+      $post=new Post($request->all());
+        if ($request->hasFile('url')){
+        $file           = $request->file("url");
+
+       $nombrearchivo  = $file->getClientOriginalName();
+       $file->move(public_path("img/posts"),$nombrearchivo);
+        $post->url      = $nombrearchivo;
+    }
+       $post->save();
+
+
+       return redirect()->route('posts.index')->with("success"," Post Creado" );
     }
 
     /**
